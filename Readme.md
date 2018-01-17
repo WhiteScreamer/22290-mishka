@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Евгений Сергиенко](https://up.htmlacademy.ru/adaptive/13/user/22290).
-* Наставник: `Неизвестно`.
+* Наставник: [Мурат Баркинхоев].
 
 ---
 
