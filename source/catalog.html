@@ -5,8 +5,38 @@
     <title>HTML Academy: Мишка</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+    <header>
+      <a class="logo header-logo" href="index.html">
+        <img class="logo__img" src="http://placehold.it/20x20" width="86" height="35" alt="Mishka">
+      </a>
+      <nav class="menu"> 
+        <button class="menu__ctrl-button" id="menu__ctrl-button-open" title="Открыть меню">          
+        </button>
+        <button class="menu__ctrl-button" id="menu__ctrl-button-close" title="Закрыть меню">          
+        </button>
+        <ul class="menu__list" id="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">              
+              Каталог товаров
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">              
+              Вязание на заказ
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">              
+              Поиск по сайту
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">              
+              Корзина: <span id="basket-state">пока пуста</span>
+            </a>
+          </li>
+        </ul>
+      </nav>       
+    </header>
   </body>
 </html>
