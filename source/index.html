@@ -83,10 +83,8 @@
         <img  class="product__pic" src="http://placehold.it/265x314" width="265" height="314" alt="Товар недели">
       </section>
       <footer class="product__footer">
-        <div  class="product__price">Цена: 990 руб</div>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <button class="product__order" name="product__order">ЗАКАЗАТЬ</button>
-        </form>
+        <div  class="product__price">Цена: 990 руб</div>        
+        <button class="product__order" id="product__order">ЗАКАЗАТЬ</button>        
       </footer>
     </article>
     <section class="about">
@@ -120,10 +118,8 @@
         <div class="reviews__contact-email">@misssssiskras</div>
       </div>
       <input class="reviews__prev" type="button" id="reviews__prev">
-      <input class="reviews__next" type="button" id="reviews__next">
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <button class="reviews__send" name="reviews__send">Написать</button>      
-      </form>
+      <input class="reviews__next" type="button" id="reviews__next">      
+      <a class="reviews__send" href="">Написать</a>            
     </section>
     <section class="contacts">
       <h1  class="contacts__caption">Контакты</h1>
@@ -145,22 +141,26 @@
       </table>
       <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10593.818341971317!2d34.99962435!3d48.409416449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1516569176312" 
-        width="320" height="455" 
+        height="455" 
         frameborder="0" style="border:0" 
         allowfullscreen>
-      </iframe>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <button class="contacts__send" name="contacts__send">Напишите нам</button>  
-      </form>
+      </iframe>      
+      <a class="contacts__send" href="">Напишите нам</a>        
     </section>
     <section class="add-to-basket">
       <h1 class="add-to-basket__caption">Добавить в корзину</h1>
       <p class="add-to-basket__text">Выберите размер:</p>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div  class="add-to-basket__size-box">
-          <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>
-          <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">
-          <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">
+          <label class="add-to-basket__size-label">
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S            
+          </label>
+          <label class="add-to-basket__size-label">
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">M
+          </label>
+          <label class="add-to-basket__size-label">
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">L
+          </label>
         </div>
         <button class="add-to-basket__send" name="add-to-basket__send">Добавить</button>
       </form>

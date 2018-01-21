@@ -38,5 +38,85 @@
         </ul>
       </nav>       
     </header>
+    <main>
+      <section class="caption">
+        <h1 class="caption__text">Каталог товаров</h1>
+      </section>
+      <section class="product">
+        <a class="product__link" href="">
+          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+        </a>
+        <h1 class="product__caption">Зайчик-попрыгайчик</h1>
+        <div class="product__desc">Рост 30 см, вес 200 г</div>        
+        <footer class="product__footer">
+          <span class="product__price">1 200 руб.</span>          
+          <button class="product__add" id="product__add"></button>          
+        </footer>
+      </section>
+      <section class="product">
+        <a class="product__link" href="">
+          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+        </a>
+        <h1 class="product__caption">Корзинка для белья</h1>
+        <div class="product__desc">Диаметр 15 см, высота 10 см</div>        
+        <footer class="product__footer">
+          <span class="product__price">690 руб.</span>          
+          <button class="product__add" id="product__add"></button>          
+        </footer>
+      </section>
+      <section class="product">
+        <a class="product__link" href="">
+          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+        </a>
+        <h1 class="product__caption">Большая корзинка для игрушек</h1>
+        <div class="product__desc">Диаметр 30 см, высота 30 см</div>        
+        <footer class="product__footer">
+          <span class="product__price">1 500 руб.</span>          
+          <button class="product__add" id="product__add"></button>          
+        </footer>
+      </section>
+      <section class="process">
+        <h1 class="process__caption">Процесс производства</h1>
+        <video class="process__video" preload="none" width="260" height="150" poster="http://placehold.it/260x150"></video>
+        <p class="process__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>        
+      </section>      
+      <form class="order" action="https://echo.htmlacademy.ru" method="post">
+        <button class="order__send">Сделать заказ</button>
+      </form>
+      <section class="add-to-basket">
+        <h1 class="add-to-basket__caption">Добавить в корзину</h1>
+        <p class="add-to-basket__text">Выберите размер:</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div  class="add-to-basket__size-box">
+            <label class="add-to-basket__size-label">
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S            
+            </label>
+            <label class="add-to-basket__size-label">
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">M
+            </label>
+            <label class="add-to-basket__size-label">
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">L
+            </label>
+          </div>
+          <button class="add-to-basket__send" name="add-to-basket__send">Добавить</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul class="soc-net__list">
+        <li class="soc-net__item">
+          <a class="soc-net__link" href="#"><a/>
+        </li>
+        <li class="soc-net__item">
+          <a class="soc-net__link" href="#"><a/>
+        </li>
+        <li class="soc-net__item">
+          <a class="soc-net__link" href="#"><a/>
+        </li>
+      </ul>
+      <div class="htmlacademy">
+        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+      </div>
+    </footer>
   </body>
 </html>
