@@ -9,35 +9,32 @@
       <a class="logo header-logo" href="index.html">
         <img class="logo__img" src="http://placehold.it/20x20" width="86" height="35" alt="Mishka">
       </a>
-      <nav class="menu"> 
-        <button class="menu__ctrl-button" id="menu__ctrl-button-open" title="Открыть меню">          
-        </button>
-        <button class="menu__ctrl-button" id="menu__ctrl-button-close" title="Закрыть меню">          
-        </button>
+      <nav class="menu">
+        <input class="menu__ctrl-button" type="button" id="menu__ctrl-button-open" value="open">
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
-            <a class="menu__link" href="catalog.html">              
+            <a class="menu__link" href="catalog.html">
               Каталог товаров
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="form.html">              
+            <a class="menu__link" href="form.html">
               Вязание на заказ
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">              
+            <a class="menu__link" href="#">
               Поиск по сайту
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">              
+            <a class="menu__link" href="#">
               Корзина: <span id="basket-state">пока пуста</span>
             </a>
           </li>
         </ul>
-      </nav>       
-    </header>    
+      </nav>
+    </header>
     <main>
       <section class="caption">
         <h1 class="caption__text">Милые штуки ручной работы для дома</h1>
@@ -46,12 +43,12 @@
         <ul class="menu-catalog__list">
           <li class="menu-catalog__item">
             <a class="menu-catalog__link" href="catalog.html">
-              Предметы интерьера              
+              Предметы интерьера
             </a>
           </li>
           <li class="menu-catalog__item">
             <a class="menu-catalog__link" href="catalog.html">
-              Детские игрушки              
+              Детские игрушки
             </a>
           </li>
         </ul>
@@ -59,10 +56,10 @@
     </main>
     <article class="product">
       <header class="product__header">
-        <h1 class="product__caption">Вязанные корзинки</h1>
-        <h2 class="product__category">ТОВАР НЕДЕЛИ</h2>
+        <h2 class="product__caption">Вязанные корзинки</h2>
+        <h3 class="product__category">товар недели</h3>
       </header>
-      <section class="product__description-box">
+      <div class="product__description-box">
         <p  class="product__description">
           Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
         </p>
@@ -81,48 +78,48 @@
           </tr>
         </table>
         <img  class="product__pic" src="http://placehold.it/265x314" width="265" height="314" alt="Товар недели">
-      </section>
+      </div>
       <footer class="product__footer">
-        <div  class="product__price">Цена: 990 руб</div>        
-        <button class="product__order" id="product__order">ЗАКАЗАТЬ</button>        
+        <div  class="product__price">Цена: 990 руб</div>
+        <input type="button" class="product__order" id="product__order" value="заказать">
       </footer>
     </article>
     <section class="about">
-      <h1 class="about__caption">Коротко о нас:</h1>
+      <h2 class="about__caption">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item">          
+        <li class="about__item">
           Экологически чистые материалы
         </li>
-        <li class="about__item">          
+        <li class="about__item">
           Скандинавский стиль по российской цене
         </li>
-        <li class="about__item">          
+        <li class="about__item">
           Увеличивает лайки на фотографиях
         </li>
-        <li class="about__item">          
+        <li class="about__item">
           Связано вручную с любовью и умилением
         </li>
-        <li class="about__item">          
+        <li class="about__item">
           Поддержка отечественного производителя
         </li>
-        <li class="about__item">          
+        <li class="about__item">
           Поставляется в подарочной упаковке
         </li>
       </ul>
     </section>
     <section class="reviews">
-      <h1  class="reviews__caption">Отзывы</h1>
+      <h2  class="reviews__caption">Отзывы</h2>
       <p  class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
       <div class="reviews__contact">
         <div class="reviews__contact-name">Анастасия Красильникова</div>
         <div class="reviews__contact-email">@misssssiskras</div>
       </div>
-      <input class="reviews__prev" type="button" id="reviews__prev">
-      <input class="reviews__next" type="button" id="reviews__next">      
-      <a class="reviews__send" href="">Написать</a>            
+      <input class="reviews__prev" type="button" id="reviews__prev" value="prev">
+      <input class="reviews__next" type="button" id="reviews__next" value="next">
+      <a class="reviews__send" href="">Написать</a>
     </section>
     <section class="contacts">
-      <h1  class="contacts__caption">Контакты</h1>
+      <h2 class="contacts__caption">Контакты</h2>
       <table class="contacts__info">
         <tr>
           <td class="contacts__field">e-mail:</td>
@@ -140,20 +137,20 @@
         </tr>
       </table>
       <iframe class="contacts__map"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10593.818341971317!2d34.99962435!3d48.409416449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1516569176312" 
-        height="455" 
-        frameborder="0" style="border:0" 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10593.818341971317!2d34.99962435!3d48.409416449999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1516569176312"
+        height="455"
+        style="border:0"
         allowfullscreen>
-      </iframe>      
-      <a class="contacts__send" href="">Напишите нам</a>        
+      </iframe>
+      <a class="contacts__send" href="">Напишите нам</a>
     </section>
     <section class="add-to-basket">
-      <h1 class="add-to-basket__caption">Добавить в корзину</h1>
+      <h2 class="add-to-basket__caption">Добавить в корзину</h2>
       <p class="add-to-basket__text">Выберите размер:</p>
       <form action="https://echo.htmlacademy.ru" method="post">
         <div  class="add-to-basket__size-box">
           <label class="add-to-basket__size-label">
-            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S            
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S
           </label>
           <label class="add-to-basket__size-label">
             <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">M
@@ -162,21 +159,23 @@
             <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">L
           </label>
         </div>
-        <button class="add-to-basket__send" name="add-to-basket__send">Добавить</button>
+        <input class="add-to-basket__send" type="submit" name="add-to-basket__send" value="Добавить">
       </form>
     </section>
     <footer>
-      <ul class="soc-net__list">
-        <li class="soc-net__item">
-          <a class="soc-net__link" href="#"><a/>
-        </li>
-        <li class="soc-net__item">
-          <a class="soc-net__link" href="#"><a/>
-        </li>
-        <li class="soc-net__item">
-          <a class="soc-net__link" href="#"><a/>
-        </li>
-      </ul>
+      <div class="soc-net">
+        <ul class="soc-net__list">
+          <li class="soc-net__item">
+            <a class="soc-net__link" href="#"></a>
+          </li>
+          <li class="soc-net__item">
+            <a class="soc-net__link" href="#"></a>
+          </li>
+          <li class="soc-net__item">
+            <a class="soc-net__link" href="#"></a>
+          </li>
+        </ul>
+      </div>
       <div class="htmlacademy">
         <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
       </div>
