@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <a class="logo header-logo" href="index.html">
-        <img class="logo__img" src="http://placehold.it/20x20" width="86" height="35" alt="Mishka">
-      </a>
-      <nav class="menu">
-        <input class="menu__ctrl-button" type="button" id="menu__ctrl-button-open" value="open">
+    <header class="header-box">
+      <section class="top-row">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+        </a>
+        <div class="top-row__menu-button top-row__menu-button--open">
+        </div>
+      </section>
+      <nav class="menu">        
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">
@@ -81,7 +85,7 @@
       </div>
       <footer class="product__footer">
         <div  class="product__price">Цена: 990 руб</div>
-        <input type="button" class="product__order" id="product__order" value="заказать">
+        <input class="product__order" type="button" id="product__order" value="заказать">
       </footer>
     </article>
     <section class="about">

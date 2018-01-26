@@ -36,10 +36,10 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h1>Вязание на заказ</h1>
-        <p>Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <section class="caption">
+        <h1 class="caption__text">Вязание на заказ</h1>        
       </section>
+      <p class="form_description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="order-group">
           <legend class="order-group__caption">ТИП</legend>
@@ -106,7 +106,7 @@
           <legend class="order-group__caption">Доп</legend>
           <textarea class="order-group__field" name="desc" rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
         </fieldset>
-        <p class="footnote">*Поля обязательны для заполнения</p>
+        <p class="order-group__footnote">*Поля обязательны для заполнения</p>
         <input class="order-form__send" type="submit" value="отправить заказ">
       </form>
     </main>
