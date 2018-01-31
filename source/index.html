@@ -2,8 +2,10 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js">
   </head>
   <body>
     <header class="header-box">
@@ -11,10 +13,10 @@
         <a class="logo" href="index.html">
           <img class="logo__img" src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
         </a>
-        <div class="top-row__menu-button top-row__menu-button--open">
+        <div class="top-row__menu-button top-row__menu-button--open" id="top-row__menu-button">
         </div>
       </section>
-      <nav class="menu">        
+      <nav class="menu" id="menu">        
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">
@@ -27,12 +29,12 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--search" href="#">
               Поиск по сайту
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--basket" href="#">
               Корзина: <span id="basket-state">пока пуста</span>
             </a>
           </li>
@@ -41,18 +43,18 @@
     </header>
     <main>
       <section class="caption">
-        <h1 class="caption__text">Милые штуки ручной работы для дома</h1>
+        <h1 class="caption__text">Милые штуки ручной<br>работы для дома</h1>
       </section>
       <nav class="menu-catalog">
         <ul class="menu-catalog__list">
           <li class="menu-catalog__item">
-            <a class="menu-catalog__link" href="catalog.html">
-              Предметы интерьера
+            <a class="menu-catalog__link menu-catalog__link--left" href="catalog.html">               
+              Предметы<br>интерьера              
             </a>
           </li>
-          <li class="menu-catalog__item">
-            <a class="menu-catalog__link" href="catalog.html">
-              Детские игрушки
+          <li class="menu-catalog__item  menu-catalog__link--right">
+            <a class="menu-catalog__link" href="catalog.html">                            
+              Детские<br>игрушки                            
             </a>
           </li>
         </ul>
@@ -60,7 +62,7 @@
     </main>
     <article class="product">
       <header class="product__header">
-        <h2 class="product__caption">Вязанные корзинки</h2>
+        <h2 class="product__caption">Вязаные корзинки</h2>
         <h3 class="product__category">товар недели</h3>
       </header>
       <div class="product__description-box">
@@ -81,7 +83,7 @@
             <td class="product__property-value">15 см</td>
           </tr>
         </table>
-        <img  class="product__pic" src="http://placehold.it/265x314" width="265" height="314" alt="Товар недели">
+        <img  class="product__pic" src="../img/triple-set-mobile@1x.jpg" width="260" height="314" alt="Товар недели">
       </div>
       <footer class="product__footer">
         <div  class="product__price">Цена: 990 руб</div>
@@ -91,23 +93,41 @@
     <section class="about">
       <h2 class="about__caption">Коротко о нас:</h2>
       <ul class="about__list">
-        <li class="about__item">
-          Экологически чистые материалы
+        <li class="about__item">          
+          <img src="img/icon-feature-flower.svg" width="40" height="40" alt="about">
+          <div class="about__item-text">
+            Экологически<br>чистые материалы
+          <div>
         </li>
         <li class="about__item">
-          Скандинавский стиль по российской цене
+          <img src="img/icon-feature-money.svg" width="45" height="35" alt="money">
+          <div class="about__item-text">
+            Скандинавский стиль<br>по российской цене
+          </div>
         </li>
         <li class="about__item">
-          Увеличивает лайки на фотографиях
+          <img src="img/icon-feature-heart.svg" width="35" height="40" alt="heart">
+          <div class="about__item-text">
+            Увеличивает лайки<br>на фотографиях
+          </div>
         </li>
         <li class="about__item">
-          Связано вручную с любовью и умилением
+          <img src="img/icon-feature-ball.svg" width="35" height="35" alt="ball">
+          <div class="about__item-text">
+            Связано вручную с<br>любовью и умилением
+          </div>
         </li>
         <li class="about__item">
-          Поддержка отечественного производителя
+          <img src="img/icon-feature-rocket.svg" width="60" height="40" alt="rocket">
+          <div class="about__item-text">
+            Поддержка отечественного<br>производителя
+          </div>
         </li>
         <li class="about__item">
-          Поставляется в подарочной упаковке
+          <img src="img/icon-feature-gift.svg" width="35" height="35" alt="gift">
+          <div class="about__item-text">
+            Поставляется в<br>подарочной упаковке
+          </div>
         </li>
       </ul>
     </section>
@@ -118,8 +138,10 @@
         <div class="reviews__contact-name">Анастасия Красильникова</div>
         <div class="reviews__contact-email">@misssssiskras</div>
       </div>
-      <input class="reviews__prev" type="button" id="reviews__prev" value="prev">
-      <input class="reviews__next" type="button" id="reviews__next" value="next">
+      <div class="reviews__buttons">
+        <input class="reviews__prev" type="button" id="reviews__prev" value="prev">
+        <input class="reviews__next" type="button" id="reviews__next" value="next">
+      </div>
       <a class="reviews__send" href="">Написать</a>
     </section>
     <section class="contacts">
@@ -146,42 +168,58 @@
         style="border:0"
         allowfullscreen>
       </iframe>
-      <a class="contacts__send" href="">Напишите нам</a>
+      <div class="contacts__send-box">
+        <a class="contacts__send" href="">Напишите нам</a>
+      </div>
     </section>
     <section class="add-to-basket">
-      <h2 class="add-to-basket__caption">Добавить в корзину</h2>
-      <p class="add-to-basket__text">Выберите размер:</p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <div  class="add-to-basket__size-box">
-          <label class="add-to-basket__size-label">
-            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S
-          </label>
-          <label class="add-to-basket__size-label">
-            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">M
-          </label>
-          <label class="add-to-basket__size-label">
-            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">L
-          </label>
-        </div>
-        <input class="add-to-basket__send" type="submit" name="add-to-basket__send" value="Добавить">
-      </form>
+      <div class="add-to-basket__wrapper">
+        <h2 class="add-to-basket__caption">Добавить<br>в корзину</h2>
+        <p class="add-to-basket__text">Выберите размер:</p>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <div  class="add-to-basket__size-box">
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeS" value="S" checked>
+            <label class="add-to-basket__size-label" for="add-to-basket__sizeS">
+              S
+            </label>
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeM" value="M">
+            <label class="add-to-basket__size-label" for="add-to-basket__sizeM">
+              M
+            </label>
+            <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeL" value="L">
+            <label class="add-to-basket__size-label" for="add-to-basket__sizeL">
+              L
+            </label>
+          </div>
+          <input class="add-to-basket__send" type="submit" name="add-to-basket__send" value="Добавить">
+        </form>
+      </div>
     </section>
     <footer>
       <div class="soc-net">
         <ul class="soc-net__list">
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="..\img\icon-insta.svg" width="25" height="25" alt="insta">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="..\img\icon-fb.svg" width="25" height="25" alt="fb">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="..\img\icon-twitter.svg" width="25" height="25" alt="twitter">
+            </a>
           </li>
         </ul>
       </div>
       <div class="htmlacademy">
-        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано</span>
+          <img class="htmlacademy__logo" src="..\img\logo-htmlacademy.svg" width="35" height="35" alt="logo-htmlacademy">
+        </a>        
       </div>
     </footer>
   </body>

@@ -6,12 +6,15 @@
 
 .top-row__menu-button{
   position: absolute;
-  right: 30px;
+  right: @mainHMargin;
   top: 0px;
   width:23px;
   height:40px;
   cursor: pointer;
   &--open{
     background: url(../img/icon-menu-open.svg) no-repeat 50% 50%;
+  }
+  &--close{
+    background: url(../img/icon-menu-close.svg) no-repeat 50% 50%;
   }
 }

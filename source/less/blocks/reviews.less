@@ -1,0 +1,61 @@
+.reviews{
+  margin: 0px @mainHMargin;
+}
+
+.reviews__caption{
+  .setH1Font();
+  margin: 30px 0px 25px 0px;;
+}
+
+.reviews__text{
+  margin: 0;
+  .setPFont();
+  line-height: 30px;
+  color: @mainTextColor;  
+}
+
+.reviews__contact{
+  margin: 25px 0px;
+}
+
+.reviews__contact-name{
+  .setH2Font();
+}
+
+.reviews__contact-email{
+  margin: 10px 0px;
+  .setMailFont();
+  color: @mainTextColor;
+}
+.reviews__buttons{
+  position: relative;
+  height: 55px;  
+  margin-top:5px;
+}
+
+.reviews__prev,
+.reviews__next{
+  position: absolute;
+  top: 0;
+  padding: 0;
+  border: @borderBetweenBlock;    
+  width: 130px;
+  height: 55px;    
+  font-size: 0px;
+}
+
+.reviews__prev{
+  left: 0;
+  .setBG(#ffffff url(../img/icon-left-arrow.svg) no-repeat 50% 50%);
+}
+
+.reviews__next{
+  right: 0;
+  .setBG(#ffffff url(../img/icon-right-arrow.svg) no-repeat 50% 50%);
+}
+
+.reviews__send{  
+  .setButton();
+  width: calc(100% - 1px);
+  margin-top: 40px;
+}
