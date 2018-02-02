@@ -1,5 +1,6 @@
 .product{
-  padding: 0px @mainHMargin;
+  margin: 0px @mainHMargin 30px @mainHMargin;
+  border: @borderBetweenBlock;
 }
 
 .product__header{
@@ -7,12 +8,12 @@
 }
 
 .product__caption{
-  .setH1Font();  
-  margin: 0;
+  .setH2Font();
+  margin: 20px 0px 10px 25px;
 }
 
 .product__category{
-  .setH2Font();  
+  .setH2Font();
   color: @secondColor;
   margin: 0;
 }
@@ -20,6 +21,15 @@
 .product__description-box{
   .setPFont();
   color: @mainTextColor;
+}
+
+.product__desc{
+  .setSPFont();
+  color: #mainTextColor;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-bottom: 25px;
+  border-bottom: @borderBetweenBlock;
 }
 
 .product__description{
@@ -36,11 +46,11 @@
 }
 
 .product__property{
-  
+
 }
 
 .product__property-label{
-  border-bottom: @borderBetweenBlock;  
+  border-bottom: @borderBetweenBlock;
   height: 40px;
   width: 95px;
 }
@@ -50,20 +60,40 @@
 }
 
 .product__pic{
-  margin: 20px 0px;
+  margin: 0px 0px;
+}
+
+.product__footer-week{
+  text-align: center;
 }
 
 .product__footer{
-  text-align: center;
-  
+  height:65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 25px 13px 25px;
 }
 
-.product__price{  
-  .setH2Font(); 
-  color: @mainTextColor;  
+.product__price{
+  .setH3Font();
+  color: @mainTextColor;
+}
+
+.product__price-week{
+  .setH2Font();
+  color: @mainTextColor;
 }
 
 .product__order{
-  .setButton(); 
+  .setButton();
   margin: 28px 0px;
+}
+
+.product__add{
+  background:url(../img/icon-cart.svg) no-repeat;
+  border: none;
+  font-size: 0px;
+  width: 20px;
+  height: 20px;
 }

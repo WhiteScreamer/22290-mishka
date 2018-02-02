@@ -2,15 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" ></script>
   </head>
   <body>
-    <header>
-      <a class="logo header-logo" href="index.html">
-        <img class="logo__img" src="http://placehold.it/20x20" width="86" height="35" alt="Mishka">
-      </a>
-      <nav class="menu">
-        <input class="menu__ctrl-button" type="button" id="menu__ctrl-button-open" value="open">
+    <header class="header-box">
+      <section class="top-row">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+        </a>
+        <div class="top-row__menu-button top-row__menu-button--open" id="top-row__menu-button">
+        </div>
+      </section>
+      <nav class="menu" id="menu">
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">
@@ -23,12 +29,12 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--search" href="#">
               Поиск по сайту
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--basket" href="#">
               Корзина: <span id="basket-state">пока пуста</span>
             </a>
           </li>
@@ -41,7 +47,7 @@
       </section>
       <section class="product">
         <a class="product__link" href="">
-          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+          <img  class="product__pic" width="260" height="195" src="../img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
         </a>
         <h2 class="product__caption">Зайчик-попрыгайчик</h2>
         <div class="product__desc">Рост 30 см, вес 200 г</div>
@@ -52,7 +58,7 @@
       </section>
       <section class="product">
         <a class="product__link" href="">
-          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+          <img  class="product__pic" width="260" height="195" src="../img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
         </a>
         <h2 class="product__caption">Корзинка для белья</h2>
         <div class="product__desc">Диаметр 15 см, высота 10 см</div>
@@ -63,9 +69,9 @@
       </section>
       <section class="product">
         <a class="product__link" href="">
-          <img  class="product__pic" width="260" height="195" src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик">
+          <img  class="product__pic" width="260" height="195" src="../img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
         </a>
-        <h2 class="product__caption">Большая корзинка для игрушек</h2>
+        <h2 class="product__caption">Большая корзинка<br>для игрушек</h2>
         <div class="product__desc">Диаметр 30 см, высота 30 см</div>
         <footer class="product__footer">
           <span class="product__price">1 500 руб.</span>
@@ -73,48 +79,65 @@
         </footer>
       </section>
       <section class="process">
-        <h2 class="process__caption">Процесс производства</h2>
-        <video class="process__video" preload="none" width="260" height="150" poster="http://placehold.it/260x150"></video>
+        <div class="process__caption-box">
+          <img class="process__icon" src="../img/icon-video.svg" width="45" height="30" alt="Видео">
+          <h2 class="process__caption">Процесс производства</h2>
+        </div>
+        <video class="process__video" preload="none" width="260" height="150" poster="../img/video-mobile@1x.jpg"></video>
         <p class="process__desc">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
       </section>
       <form class="order" action="https://echo.htmlacademy.ru" method="post">
         <input class="order__send" type="submit" value="Сделать заказ">
       </form>
       <section class="add-to-basket">
-        <h2 class="add-to-basket__caption">Добавить в корзину</h2>
-        <p class="add-to-basket__text">Выберите размер:</p>
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <div  class="add-to-basket__size-box">
-            <label class="add-to-basket__size-label">
-              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="S" checked>S
-            </label>
-            <label class="add-to-basket__size-label">
-              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="M">M
-            </label>
-            <label class="add-to-basket__size-label">
-              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" value="L">L
-            </label>
-          </div>
-          <input class="add-to-basket__send" type="submit" name="add-to-basket__send" value="Добавить">
-        </form>
+        <div class="add-to-basket__wrapper">
+          <h2 class="add-to-basket__caption">Добавить<br>в корзину</h2>
+          <p class="add-to-basket__text">Выберите размер:</p>
+          <form action="https://echo.htmlacademy.ru" method="post">
+            <div  class="add-to-basket__size-box">
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeS" value="S" checked>
+              <label class="add-to-basket__size-label" for="add-to-basket__sizeS">
+                S
+              </label>
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeM" value="M">
+              <label class="add-to-basket__size-label" for="add-to-basket__sizeM">
+                M
+              </label>
+              <input class="add-to-basket__size" type="radio" name="add-to-basket__size" id="add-to-basket__sizeL" value="L">
+              <label class="add-to-basket__size-label" for="add-to-basket__sizeL">
+                L
+              </label>
+            </div>
+            <input class="add-to-basket__send" type="submit" name="add-to-basket__send" value="Добавить">
+          </form>
+      </div>
       </section>
     </main>
     <footer>
       <div class="soc-net">
         <ul class="soc-net__list">
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-insta.svg" width="25" height="25" alt="insta">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-fb.svg" width="25" height="25" alt="fb">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-twitter.svg" width="25" height="25" alt="twitter">
+            </a>
           </li>
         </ul>
       </div>
       <div class="htmlacademy">
-        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано</span>
+          <img class="htmlacademy__logo" src="../img/logo-htmlacademy.svg" width="35" height="35" alt="logo-htmlacademy">
+        </a>
       </div>
     </footer>
   </body>

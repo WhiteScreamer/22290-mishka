@@ -2,15 +2,21 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
   </head>
   <body>
-    <header>
-      <a class="logo header-logo" href="index.html">
-        <img class="logo__img" src="http://placehold.it/20x20" width="86" height="35" alt="Mishka">
-      </a>
-      <nav class="menu">
-        <input class="menu__ctrl-button" type="button" id="menu__ctrl-button-open" value="open">
+    <header class="header-box">
+      <section class="top-row">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="img/logo-mobile.svg" width="90" height="40" alt="Mishka">
+        </a>
+        <div class="top-row__menu-button top-row__menu-button--open" id="top-row__menu-button">
+        </div>
+      </section>
+      <nav class="menu" id="menu">
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">
@@ -23,12 +29,12 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--search" href="#">
               Поиск по сайту
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link menu__link--basket" href="#">
               Корзина: <span id="basket-state">пока пуста</span>
             </a>
           </li>
@@ -37,7 +43,7 @@
     </header>
     <main>
       <section class="caption">
-        <h1 class="caption__text">Вязание на заказ</h1>        
+        <h1 class="caption__text">Вязание на заказ</h1>
       </section>
       <p class="form_description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
       <form class="order-form" action="https://echo.htmlacademy.ru" method="post">
@@ -81,15 +87,15 @@
         </fieldset>
         <fieldset class="order-group">
           <legend class="order-group__caption">ФИО</legend>
-          <label class="order-group__field-label">
+          <label class="order-group__field-label__text">
             Имя:
             <input class="order-group__field" type="text" name="name" placeholder="Введите ваше имя*" required autofocus>
           </label>
-          <label class="order-group__field-label">
+          <label class="order-group__field-label__text">
             Фамилия:
             <input class="order-group__field" type="text" name="surname" placeholder="Укажите фамилию*" required>
           </label>
-          <label class="order-group__field-label">
+          <label class="order-group__field-label__text">
             Отчество:
             <input class="order-group__field" type="text" name="patronymic" placeholder="Отчество, если желаете">
           </label>
@@ -114,18 +120,27 @@
       <div class="soc-net">
         <ul class="soc-net__list">
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-insta.svg" width="25" height="25" alt="insta">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-fb.svg" width="25" height="25" alt="fb">
+            </a>
           </li>
           <li class="soc-net__item">
-            <a class="soc-net__link" href="#"></a>
+            <a class="soc-net__link" href="#">
+              <img src="../img/icon-twitter.svg" width="25" height="25" alt="twitter">
+            </a>
           </li>
         </ul>
       </div>
       <div class="htmlacademy">
-        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+        <a class="htmlacademy__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано</span>
+          <img class="htmlacademy__logo" src="../img/logo-htmlacademy.svg" width="35" height="35" alt="logo-htmlacademy">
+        </a>
       </div>
     </footer>
   </body>
