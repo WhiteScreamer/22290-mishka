@@ -1,0 +1,22 @@
+.top-row {
+  position: relative;
+  margin: 20px 0;
+  height: 40px;
+}
+
+.top-row__menu-button {
+  position: absolute;
+  right: @mainHMargin;
+  top: 0;
+  width: 23px;
+  height: 40px;
+  cursor: pointer;
+
+  &--open {
+    background: url("../img/icon-menu-open.svg") no-repeat 50% 50%;
+  }
+
+  &--close {
+    background: url("../img/icon-menu-close.svg") no-repeat 50% 50%;
+  }
+}

@@ -1,0 +1,43 @@
+.menu {
+  display: none;
+
+  &--visible {
+    display: auto;
+  }
+}
+
+.menu__list {
+  .ulReset();
+}
+
+.menu__link {
+  display: block;
+  padding-left: 75px;
+  height: 80px;
+  vertical-align: middle;
+
+  .setH2Font();
+  text-decoration: none;
+  line-height: 80px;
+  color: black;
+  border-top: @borderBetweenBlock;
+
+  &:hover {
+    color: @colorLinkHover;
+  }
+
+  &:active {
+    color: @colorLinkActive;
+  }
+  .icon-position(@img) {
+    background: url("../img/@{img}") no-repeat 30px 30px;
+  }
+
+  &--search {
+    .icon-position("icon-search.svg");
+  }
+
+  &--basket {
+    .icon-position("icon-cart.svg");
+  }
+}

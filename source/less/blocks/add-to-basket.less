@@ -1,0 +1,55 @@
+.add-to-basket {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.add-to-basket__caption {
+  .setH1Font();
+  text-transform: uppercase;
+}
+
+.add-to-basket__wrapper {
+  display: inline-block;
+  width: 260px;
+  margin: 50% auto;
+}
+
+.add-to-basket__text {
+  .setPFont();
+  color: @mainTextColor;
+}
+
+.add-to-basket__size-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.add-to-basket__size-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 80px;
+  border: @borderBetweenBlock;
+  height: 50px;
+  .setH2Font();
+  color: @mainTextColor;
+}
+
+:checked + .add-to-basket__size-label {
+  border: @secondColor solid 1px;
+}
+
+.add-to-basket__size {
+  display: none;
+}
+
+.add-to-basket__send {
+  .setButton(#ffffff; @secondColor; none);
+}

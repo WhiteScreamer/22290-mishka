@@ -1,0 +1,115 @@
+@test:"";
+
+@font-face {
+  font-family: "OpenSans Bold";
+  src: url("../fonts/opensansbold.woff") format("woff"), url("../fonts/opensansbold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/opensans.woff") format("woff"), url("../fonts/opensans.woff2") format("woff2");
+}
+
+@borderBetweenBlock: 1px solid #ececec;
+
+@colorLinkHover: #666666;
+@colorLinkActive: #b2b2b2;
+@secondColor: #63d1bb;
+@mainTextColor: #444444;
+@mainHMargin: 30px;
+
+.setFontOSBfamily(@size) {
+  font-family: "OpenSans Bold", sans-serif;
+  font-size: ~"@{size}px";
+}
+
+.setH0Font() {
+  .setFontOSBfamily(27);
+}
+
+.setH1Font() {
+  .setFontOSBfamily(25);
+}
+
+.setHAFont() {
+  .setFontOSBfamily(19);
+}
+
+.setH2Font() {
+  .setFontOSBfamily(17);
+}
+
+.setH3Font() {
+  .setFontOSBfamily(15);
+}
+
+.setFontOSfamily(@size) {
+  font-family: "OpenSans", sans-serif;
+  font-size: ~"@{size}px";
+}
+
+.setMailFont() {
+  .setFontOSfamily(17);
+}
+
+.setPFont() {
+  .setFontOSfamily(15);
+}
+
+.setNoteFont() {
+  .setFontOSfamily(14);
+}
+
+.setSPFont() {
+  .setFontOSfamily(13);
+}
+
+.ulReset() {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.setBG(@background) when(@test=1) {
+  background: none;
+}
+
+.setBG(@background) when(@test="") {
+  background: @background;
+}
+
+.setBodyBG() when(@test="mi") {
+  background-image: url("mishka-index-mobile.jpg");
+}
+
+.setBodyBG() when(@test="mc") {
+  background-image: url("mishka-catalog-mobile.jpg");
+}
+
+.setBodyBG() when(@test="mf") {
+  background-image: url("mishka-form-mobile.jpg");
+}
+
+.setBodyBG() when(@test=0) {
+  background: none;
+}
+
+body {
+  .setBodyBG();
+}
+
+.setButton(@color: @mainTextColor; @bgColor: #ffffff; @border: @mainTextColor solid 2px) {
+  display: inline-block;
+  padding: 0;
+  height: 50px;
+  .setH2Font();
+  color: @color;
+  width: 100%;
+  background: @bgColor;
+  border: @border;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+  line-height: 50px;
+  vertical-align: middle;
+}
