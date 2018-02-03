@@ -1,4 +1,4 @@
-.add-to-basket{
+.add-to-basket {
   display: none;
   position: fixed;
   left: 0;
@@ -9,29 +9,29 @@
   text-align: center;
 }
 
-.add-to-basket__caption{
+.add-to-basket__caption {
   .setH1Font();
   text-transform: uppercase;
 }
 
-.add-to-basket__wrapper{
+.add-to-basket__wrapper {
   display: inline-block;
   width: 260px;
   margin: 50% auto;
 }
 
-.add-to-basket__text{
+.add-to-basket__text {
   .setPFont();
   color: @mainTextColor;
 }
 
-.add-to-basket__size-box{
+.add-to-basket__size-box {
   display: flex;
   justify-content: space-between;
-  margin: 30px 0px;
+  margin: 30px 0;
 }
 
-.add-to-basket__size-label{
+.add-to-basket__size-label {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +41,15 @@
   .setH2Font();
   color: @mainTextColor;
 }
-:checked + .add-to-basket__size-label{
+
+:checked + .add-to-basket__size-label {
   border: @secondColor solid 1px;
 }
 
-.add-to-basket__size{
+.add-to-basket__size {
   display: none;
 }
 
-.add-to-basket__send{
+.add-to-basket__send {
   .setButton(#ffffff; @secondColor; none);
 }

@@ -1,41 +1,43 @@
-.menu{
+.menu {
   display: none;
-  &--visible{
+
+  &--visible {
     display: auto;
   }
 }
 
-.menu__list{
+.menu__list {
   .ulReset();
 }
 
-.menu__item{
-}
-.menu__link{
+.menu__link {
   display: block;
-  padding-left:75px;
-  height:80px;
+  padding-left: 75px;
+  height: 80px;
   vertical-align: middle;
 
   .setH2Font();
   text-decoration: none;
-  line-height:80px;
-  color:black;
+  line-height: 80px;
+  color: black;
   border-top: @borderBetweenBlock;
 
-  &:hover{
-    color:@colorLinkHover;
+  &:hover {
+    color: @colorLinkHover;
   }
-  &:active{
+
+  &:active {
     color: @colorLinkActive;
   }
-  .icon-position(@img){
-    background:url("../img/@{img}") no-repeat 30px 30px;
+  .icon-position(@img) {
+    background: url("../img/@{img}") no-repeat 30px 30px;
   }
-  &--search{
+
+  &--search {
     .icon-position("icon-search.svg");
   }
-  &--basket{
+
+  &--basket {
     .icon-position("icon-cart.svg");
   }
 }
