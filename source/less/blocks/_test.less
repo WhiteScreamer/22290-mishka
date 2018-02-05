@@ -1,0 +1,55 @@
+.setBodyBG(mi) when(@test=1) {
+  background-image: url("mishka-index-mobile.jpg");
+}
+
+.setBodyBG(ti) when(@test=1) {
+  background-image: url("mishka-index-tablet.jpg");
+}
+
+.setBodyBG(di) when(@test=1) {
+  background-image: url("mishka-index-desktop.jpg");
+}
+
+.setBodyBG(mc) when(@test=1) {
+  background-image: url("mishka-catalog-mobile.jpg");
+}
+
+.setBodyBG(mc) when(@test=1) {
+  background-image: url("mishka-catalog-tablet.jpg");
+}
+
+.setBodyBG(mc) when(@test=1) {
+  background-image: url("mishka-catalog-desktop.jpg");
+}
+
+.setBodyBG(mf) when(@test=1) {
+  background-image: url("mishka-form-mobile.jpg");
+}
+
+.setBodyBG(mf) when(@test=1) {
+  background-image: url("mishka-form-tablet.jpg");
+}
+
+.setBodyBG(mf) when(@test=1) {
+  background-image: url("mishka-form-desktop.jpg");
+}
+
+.setBodyBG() when(@test=0) {
+  background: none;
+}
+
+.body-index {
+  .setBodyBG(mi);
+}
+
+@media (min-width: 768px) {
+  .body-index {
+    .setBodyBG(ti);
+  }
+}
+
+@media (min-width: 1250px) {
+  .body-index {
+    .setBodyBG(di);
+  }
+}

@@ -1,4 +1,4 @@
-@test:"";
+@test:0;
 
 @font-face {
   font-family: "OpenSans Bold";
@@ -74,28 +74,8 @@
   background: none;
 }
 
-.setBG(@background) when(@test="") {
+.setBG(@background) when(@test=0) {
   background: @background;
-}
-
-.setBodyBG() when(@test="mi") {
-  background-image: url("mishka-index-mobile.jpg");
-}
-
-.setBodyBG() when(@test="mc") {
-  background-image: url("mishka-catalog-mobile.jpg");
-}
-
-.setBodyBG() when(@test="mf") {
-  background-image: url("mishka-form-mobile.jpg");
-}
-
-.setBodyBG() when(@test=0) {
-  background: none;
-}
-
-body {
-  .setBodyBG();
 }
 
 .setButton(@color: @mainTextColor; @bgColor: #ffffff; @border: @mainTextColor solid 2px) {

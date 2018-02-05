@@ -2,7 +2,7 @@
   display: none;
 
   &--visible {
-    display: auto;
+    display: block;
   }
 }
 
@@ -15,7 +15,6 @@
   padding-left: 75px;
   height: 80px;
   vertical-align: middle;
-
   .setH2Font();
   text-decoration: none;
   line-height: 80px;
@@ -39,5 +38,56 @@
 
   &--basket {
     .icon-position("icon-cart.svg");
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  
+  .menu__item{
+    display: inline-block;
+  }
+  
+  .menu__link {
+    .setH3Font();    
+  }
+  
+  .menu__link--search {    
+    .setH2Font();
+    height: 90px;
+    font-size: 0px;
+  }
+  
+  .menu__link--basket {
+    height: 90px;
+    .setH2Font();
+  }
+}
+
+@media (min-width: 1250px) {
+  .menu {
+    display: block;
+  }
+  
+  .menu__item{
+    display: inline-block;
+  }
+  
+  .menu__link {
+    .setH2Font();
+    display: inline-block;
+  }
+  
+  .menu__link--search {   
+    font-size: 0px;
+  }
+  
+  .menu__link--basket {
+    
   }
 }
