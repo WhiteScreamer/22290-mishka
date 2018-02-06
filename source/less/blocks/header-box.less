@@ -1,3 +1,25 @@
-.header-box {
-  border-bottom: @borderBetweenBlock;  
+.header-box {  
+  
+}
+
+.header-box__note{
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header-box__note {    
+    display: block;
+    text-align: right;    
+    padding-right: @mainHMarginTab;
+    height: 60px;
+    line-height: 60px;
+    .setPFont();
+    color: @mainTextColor;
+  }
+}
+
+@media (min-width: 1250px) {
+  .header-box__note {
+    padding-right: @mainHMarginDesk;
+  }
 }

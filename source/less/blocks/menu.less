@@ -6,11 +6,15 @@
   }
 }
 
-.menu__list {
+.menu__list, .menu__add-list {
   .ulReset();
 }
 
-.menu__link {
+.menu__add-list{
+  display: none;
+}
+
+.menu__link, .menu__add-link {
   display: block;
   padding-left: 75px;
   height: 80px;
@@ -19,7 +23,7 @@
   text-decoration: none;
   line-height: 80px;
   color: black;
-  border-top: @borderBetweenBlock;
+  border-bottom: @borderBetweenBlock; 
 
   &:hover {
     color: @colorLinkHover;
@@ -41,53 +45,96 @@
   }
 }
 
+.menu__link--new, .menu__link--sale {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .menu {
     position: absolute;
     top: 0;
-    left: 0;
+    left: @mainHMarginTab;
     display: block;
+    width: 100%;    
   }
   
-  .menu__item{
-    display: inline-block;
-  }
+  .menu__list{
+    display: flex;   
+    justify-content: space-between;
+  }   
   
   .menu__link {
-    .setH3Font();    
+    .setH3Font();  
+    border-top: none; 
+    padding-left: 0;
+    width: 165px;
+    margin-top: 90px;
+    height: 60px;
+    line-height: 60px;
+  }  
+  
+  .menu__item--search {
+    margin-left: auto;
   }
   
   .menu__link--search {    
     .setH2Font();
     height: 90px;
-    font-size: 0px;
+    margin-top: 0;
+    padding-left: 75px;
+    line-height: 90px;
+    width: 0;
+    font-size: 0px;     
   }
   
   .menu__link--basket {
     height: 90px;
-    .setH2Font();
+    margin-top: 0;
+    padding-left: 75px;
+    padding-right: @mainHMarginTab*2;
+    line-height: 90px;
+    width: auto;
+    .setH2Font();    
   }
 }
 
 @media (min-width: 1250px) {
-  .menu {
-    display: block;
-  }
-  
-  .menu__item{
-    display: inline-block;
-  }
+  .menu{
+    left: @mainHMarginDesk;    
+  }  
   
   .menu__link {
-    .setH2Font();
-    display: inline-block;
-  }
+    margin-top: 0;
+    height: 90px;
+    line-height: 90px;    
+    .setH2Font();       
+    width: 220px;
+  }   
   
-  .menu__link--search {   
+  .menu__link--search {        
     font-size: 0px;
+    width: 0;
+  }
+
+  .menu__link--basket {    
+    padding-right: @mainHMarginDesk*2;
+    width: auto;    
   }
   
-  .menu__link--basket {
-    
+  .menu__add-list {
+    display: block;   
   }
+  
+  .menu__add-link{    
+    border: none;          
+    padding-left: 0;
+    width: 220px;
+    height: 60px;
+    line-height: 60px;
+    .setH3Font();    
+  }
+  
+  .menu__add-item{
+    display: inline-block;    
+  }  
 }
