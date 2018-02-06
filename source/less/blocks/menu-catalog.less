@@ -1,14 +1,22 @@
-.menu-catalog__list {
+.menu-catalog__list {  
   .ulReset();
+  display: flex;
+  flex-direction: column;
 }
 
-.menu-catalog__link {
-  display: block;
-  height: 55px;
+.menu-catalog__item{   
+  flex-grow: 1;
+}
+
+.menu-catalog__link {  
+  display: flex;
+  align-items: center;
+  height: 105px;
+  line-height: 23px;
   text-decoration: none;
-  padding: 25px @mainHMargin;
+  padding: 0 0 0 @mainHMargin;  
   color: white;
-  .setHAFont();
+  .setHAFont();  
 
   &--left {
     .setBG(#63d1bb url(../img/icon-interior.svg) no-repeat right 30px top 50%);
@@ -16,5 +24,29 @@
 
   &--right {
     .setBG(#56c3b2 url(../img/icon-toy.svg) no-repeat right 20px top 50%);
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-catalog__list {
+    flex-direction: row;
+    margin: 0 @mainHMarginTab;    
+  }
+  
+  .menu-catalog__item{
+    width: 50%;
+  }
+  
+  .menu-catalog__link {
+    padding: 0 0 0 35px;
+    line-height: 30px;
+    height: 115px;
+    .setHAFontTab();
+  }
+}
+
+@media (min-width: 1250px) {
+  .menu-catalog__list {
+    margin: 0 @mainHMarginDesk;
   }
 }

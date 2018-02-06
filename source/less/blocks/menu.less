@@ -16,12 +16,12 @@
 
 .menu__link, .menu__add-link {
   display: block;
-  padding-left: 75px;
-  height: 80px;
+  padding-left: 75px;  
   vertical-align: middle;
+  height: @mainMenuHeight;
+  line-height: @mainMenuHeight;
   .setH2Font();
-  text-decoration: none;
-  line-height: 80px;
+  text-decoration: none;  
   color: black;
   border-bottom: @borderBetweenBlock; 
 
@@ -68,9 +68,9 @@
     border-top: none; 
     padding-left: 0;
     width: 165px;
-    margin-top: 90px;
-    height: 60px;
-    line-height: 60px;
+    margin-top: @mainMenuHeightTab;
+    height: @mainMenuSecondHeightTab;
+    line-height: @mainMenuSecondHeightTab;
   }  
   
   .menu__item--search {
@@ -78,21 +78,21 @@
   }
   
   .menu__link--search {    
-    .setH2Font();
-    height: 90px;
+    .setH2Font();    
     margin-top: 0;
     padding-left: 75px;
-    line-height: 90px;
+    height: @mainMenuHeightTab;
+    line-height: @mainMenuHeightTab;
     width: 0;
     font-size: 0px;     
   }
   
-  .menu__link--basket {
-    height: 90px;
+  .menu__link--basket {    
     margin-top: 0;
     padding-left: 75px;
     padding-right: @mainHMarginTab*2;
-    line-height: 90px;
+    height: @mainMenuHeightTab;
+    line-height: @mainMenuHeightTab;
     width: auto;
     .setH2Font();    
   }
@@ -105,8 +105,8 @@
   
   .menu__link {
     margin-top: 0;
-    height: 90px;
-    line-height: 90px;    
+    height: @mainMenuHeightTab;
+    line-height: @mainMenuHeightTab;    
     .setH2Font();       
     width: 220px;
   }   
@@ -129,8 +129,8 @@
     border: none;          
     padding-left: 0;
     width: 220px;
-    height: 60px;
-    line-height: 60px;
+    height: @mainMenuSecondHeightTab;
+    line-height: @mainMenuSecondHeightTab;
     .setH3Font();    
   }
   

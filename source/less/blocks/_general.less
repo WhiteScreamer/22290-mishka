@@ -20,9 +20,23 @@
 @mainHMarginTab: 50px;
 @mainHMarginDesk: 100px;
 
+@mainHSecondMarginDesk: 175px;
+
+@mainMenuHeight: 80px;
+@mainMenuHeightTab: 85px;
+@mainMenuSecondHeightTab: 65px;
+
 .setFontOSBfamily(@size) {
   font-family: "OpenSans Bold", sans-serif;
   font-size: ~"@{size}px";
+}
+
+.setH0FontDesk() {
+  .setFontOSBfamily(53);
+}
+
+.setH0FontTab() {
+  .setFontOSBfamily(43);
 }
 
 .setH0Font() {
@@ -33,8 +47,16 @@
   .setFontOSBfamily(25);
 }
 
+.setHAFontTab() {
+  .setFontOSBfamily(20);
+}
+
 .setHAFont() {
   .setFontOSBfamily(19);
+}
+
+.setH2FontTab() {
+  .setFontOSBfamily(18);
 }
 
 .setH2Font() {

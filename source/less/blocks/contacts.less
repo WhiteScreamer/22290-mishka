@@ -1,25 +1,41 @@
 .contacts {
-  margin: 90px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
 }
 
 .contacts__caption {
   margin: 0 @mainHMargin;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
   .setFontOSBfamily(17);
 }
 
-.contacts__info {
-  margin: 30px @mainHMargin;
+.contacts__email, 
+.contacts__address {
+  margin: 0 @mainHMargin;
   width: 100%;
   .setPFont();
   color: @mainTextColor;
 }
 
-.contacts__field {
-  padding: 0;
+.contacts__address{
+  margin-top: 40px;
+  width: 250px;
+}
+
+.contacts__field, 
+.contacts__value {
+  padding: 0;  
   vertical-align: top;
 }
 
-.contacts__field a {
+.contacts__field {
+  width: 75px;
+}
+
+.contacts__value a {
   color: @mainTextColor;
   text-decoration: none;
 }
@@ -27,10 +43,11 @@
 .contacts__address-row {
   margin: 0;
   padding: 0;
+  padding-bottom: 15px;
 }
 
 .contacts__map {
-  margin-top: 100px;
+  margin-top: 25px;
   width: 100%;
 }
 
@@ -40,4 +57,18 @@
 
 .contacts__send {
   .setButton();
+}
+
+@media (min-width: 768px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;    
+  }
+  
+  .contacts__caption {
+    margin: 0 @mainHMarginTab;
+  }
+}
+
+@media (min-width: 1250px) {
 }

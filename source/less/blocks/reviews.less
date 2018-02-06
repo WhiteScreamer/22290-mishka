@@ -1,10 +1,20 @@
 .reviews {
-  margin: 0 @mainHMargin;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 @mainHMargin;  
+}
+
+.reviews__margin{
+  margin-top: 5px;
 }
 
 .reviews__caption {
   .setH1Font();
-  margin: 30px 0 25px 0;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
+  margin: 0;
 }
 
 .reviews__text {
@@ -15,34 +25,36 @@
 }
 
 .reviews__contact {
-  margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  height: 110px;  
 }
 
-.reviews__contact-name {
+.reviews__contact-name {  
   .setH2Font();
 }
 
-.reviews__contact-email {
-  margin: 10px 0;
+.reviews__contact-email {  
+  margin-top: 10px;
   .setMailFont();
   color: @mainTextColor;
 }
 
-.reviews__buttons {
-  position: relative;
-  height: 55px;
-  margin-top: 5px;
+.reviews__buttons { 
+  display: flex;
+  height: 55px;  
+  width: 260px;
 }
 
 .reviews__prev,
-.reviews__next {
-  position: absolute;
-  top: 0;
+.reviews__next {   
   padding: 0;
   border: @borderBetweenBlock;
-  width: 130px;
+  width: 50%;
   height: 55px;
-  font-size: 0;
+  font-size: 0;  
 }
 
 .reviews__prev {
@@ -59,4 +71,82 @@
   .setButton();
   width: calc(100% - 1px);
   margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .reviews{
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 460px;
+    padding: 0 @mainHMarginTab;
+    .setBG(url("../img/review@1x.jpg") no-repeat);
+  }
+  
+  .reviews__caption {
+    margin-top: 60px;
+    height: 80px;
+    line-height: 80px;
+    .setH0FontTab();
+    order: 1;
+  }   
+  
+  .reviews__contact-name {
+    .setH2FontTab();
+  }    
+  
+  .reviews__send{
+    margin-top: 75px;
+    width: 175px;
+    order: 2;
+  }
+  
+  .reviews__buttons{
+    margin-top: 25px;
+    order: 5;
+    width: 170px;
+  }
+  
+  .reviews__contact{
+    margin-bottom: 25px;
+    order: 4;
+  }
+  
+  .reviews__margin{
+    margin-top: 30px;
+  }
+  
+  .reviews__text {
+    width: 100%;
+    order: 3;
+    .setMailFont();
+  }
+}
+
+@media (min-width: 1250px) {
+  .reviews {
+    padding: 0 @mainHMarginDesk 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+  }
+  
+  .reviews__caption {
+    margin-top: 65px;
+    .setH0FontDesk();
+  }
+  
+  .reviews__send{
+    margin-top: 80px;
+  }
+  
+  .reviews__buttons{
+    margin-bottom: 95px;
+  }
+  
+  .reviews__contact-name {
+    .setH2Font();
+  }  
+  
+  .reviews__text {
+    padding-top: 15px;
+    padding-right: 105px;
+  }
 }

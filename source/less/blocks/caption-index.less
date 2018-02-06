@@ -1,13 +1,36 @@
-.caption-index {
-  .setBG(url(../img/hero-mobile@1x.jpg) no-repeat 50% -20px);
-  height: 140px;
-  padding: 70px 30px;
+@captionTextPadding: 70px;
+@captionTextPaddingTab: 90px;
+
+.caption-index {    
+  margin: 0;
+  padding: @captionTextPadding @mainHMargin 0 @mainHMargin;
+  height: 280px - @captionTextPadding;
+  .setBG(url(../img/hero-mobile@1x.jpg) no-repeat 50% -20px);     
 }
 
 .caption-index__text {
   margin: 0;
-  padding: 0;
-  .setH0Font();
+  padding: 0;    
+  .setH0Font();  
   text-align: center;
   line-height: 30px;
+}
+
+@media (min-width: 768px){
+  .caption-index {
+    padding-top: @captionTextPaddingTab;
+    height: 565px - @captionTextPaddingTab;
+  }
+  
+  .caption-index__text{
+    .setH0FontTab();
+    line-height: 50px;
+  }
+}
+
+@media (min-width: 1250px){
+  .caption-index__text{
+    .setH0FontDesk();
+    line-height: 60px;
+  }
 }

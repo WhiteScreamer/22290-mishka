@@ -1,13 +1,21 @@
 .about {
-  margin: 40px @mainHMargin 30px @mainHMargin;
+  margin: 30px @mainHMargin 0 @mainHMargin;
 }
 
 .about__caption {
-  margin: 30px 0;
+  margin: 0;
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
   .setH1Font();
 }
 
-.about__list {
+.about__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__list, .about__list-second {
   .ulReset();
   .setH2Font();
 }
@@ -23,4 +31,50 @@
   position: absolute;
   bottom: 25px;
   line-height: 20px;
+}
+
+@media (min-width: 768px) {
+  .about{
+    margin: 70px @mainHMarginTab 0 @mainHMarginTab;
+  }
+  
+  .about__caption {
+    height: 145px;
+    line-height: 150px;
+    .setH0FontTab();    
+  }
+  
+  .about__wrapper {
+    flex-direction: row;
+  }
+  
+  .about__list, .about__list-second{    
+    width: 50%;
+    .setHAFontTab();
+  }
+  
+  .about__item {    
+    height: 150px;
+    margin-bottom: 5px;
+  }
+  
+  .about__item-text {
+    bottom: 50px;
+  }
+}
+
+@media (min-width: 1250px) {
+  .about{
+    margin: 110px @mainHMarginDesk 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+  }
+  
+  .about__caption {
+    height: 150px;
+    line-height: 150px;
+    .setH0FontDesk();    
+  }
+  
+  .about__list, .about__list-second{    
+    width: 350px;
+  }
 }
