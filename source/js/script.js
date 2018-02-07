@@ -12,11 +12,13 @@ document.addEventListener('DOMContentLoaded', function(){
   });
   var modalW=document.getElementById("add-to-basket");
   var order=document.getElementById("product__order");
-  order.addEventListener("click", function() {
-      if(modalW.className=="add-to-basket") {
-        modalW.className="add-to-basket--visible";
-      }else{
-        modalW.className="add-to-basket";
-      }
-  });
+  if(order){
+    order.addEventListener("click", function() {
+        if(modalW.className=="add-to-basket") {
+          modalW.className="add-to-basket--visible";
+        }else{
+          modalW.className="add-to-basket";
+        }
+    });
+  }
 });
