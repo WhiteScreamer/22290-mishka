@@ -1,5 +1,5 @@
 .product-week {
-  padding: 0 @mainHMargin;  
+  padding: 0 @mainHMargin;
 }
 
 .product-week__header {
@@ -21,7 +21,7 @@
   margin: 0;
 }
 
-.product-week__description-box {  
+.product-week__description-box {
   position: relative;
   .setPFont();
   color: @mainTextColor;
@@ -51,16 +51,16 @@
 }
 
 .product-week__pic {
-  margin: 15px 0 0 0; 
+  margin: 15px 0 0 0;
 }
 
 .product-week__footer {
   text-align: center;
 }
 
-.product-week__price {  
+.product-week__price {
   height: 55px;
-  line-height:55px;
+  line-height: 55px;
   vertical-align: middle;
   .setH2Font();
   color: @mainTextColor;
@@ -75,96 +75,96 @@
 
 @media (min-width: 768px) {
   .product-week {
-    padding: 0 @mainHMarginTab;  
+    padding: 0 @mainHMarginTab;
   }
-  
+
   .product-week__header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 145px;
   }
-  
+
   .product-week__caption {
     .setH0FontTab();
   }
-  
+
   .product-week__category {
     .setH2Font();
-    text-align:center;
+    text-align: center;
     margin: 0 25px;
     width: @categoryWidth;
   }
-  
-  .product-week__description{
+
+  .product-week__description {
     .setMailFont();
     line-height: 30px;
     width: 290px;
   }
-  
-  .product-week__properties{
+
+  .product-week__properties {
     width: 290px;
-    margin-top: 40px; 
+    margin-top: 40px;
   }
-  
+
   .product-week__pic {
     position: absolute;
     right: 0;
     top: 0;
   }
-  
+
   .product-week__footer {
-    width: 290px;    
+    width: 290px;
   }
-  
+
   .product-week__price {
     .setHAFontTab();
     height: 100px;
     line-height: 100px;
   }
-  
-  .product-week__order{
+
+  .product-week__order {
     margin: 0;
   }
 }
 
 @media (min-width: 1250px) {
   .product-week {
-    padding: 75px @mainHMarginDesk 0 @mainHMarginDesk;      
+    padding: 75px @mainHMarginDesk 0 @mainHMarginDesk;
   }
-  
+
   .product-week__header {
     justify-content: flex-start;
     height: 155px;
   }
-  
+
   .product-week__caption {
     order: 2;
     .setH0FontDesk();
   }
-  
+
   .product-week__category {
     order: 1;
     margin: 0 (@mainHSecondMarginDesk - @categoryWidth) / 2 - 2px;
   }
-  
+
   .product-week__description-box {
     padding-left: @mainHSecondMarginDesk;
   }
-  
+
   .product-week__properties {
     margin-top: 50px;
   }
-  
-  .product-week__property-label {    
-    height: 37px;    
+
+  .product-week__property-label {
+    height: 37px;
   }
-  
+
   .product-week__footer {
     padding-left: @mainHSecondMarginDesk;
     margin-top: 70px;
   }
-  
+
   .product-week__pic {
     top: -155px;
   }

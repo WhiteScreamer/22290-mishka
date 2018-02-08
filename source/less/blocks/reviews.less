@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 @mainHMargin;  
+  padding: 0 @mainHMargin;
 }
 
-.reviews__margin{
+.reviews__margin {
   margin-top: 5px;
 }
 
@@ -29,32 +29,32 @@
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  height: 110px;  
+  height: 110px;
 }
 
-.reviews__contact-name {  
+.reviews__contact-name {
   .setH2Font();
 }
 
-.reviews__contact-email {  
+.reviews__contact-email {
   margin-top: 10px;
   .setMailFont();
   color: @mainTextColor;
 }
 
-.reviews__buttons { 
+.reviews__buttons {
   display: flex;
-  height: 55px;  
+  height: 55px;
   width: 260px;
 }
 
 .reviews__prev,
-.reviews__next {   
+.reviews__next {
   padding: 0;
   border: @borderBetweenBlock;
   width: 50%;
   height: 55px;
-  font-size: 0;  
+  font-size: 0;
 }
 
 .reviews__prev {
@@ -74,7 +74,7 @@
 }
 
 @media (min-width: 768px) {
-  .reviews{
+  .reviews {
     flex-direction: row;
     justify-content: space-between;
     align-content: space-between;
@@ -82,40 +82,40 @@
     padding: 0 @mainHMarginTab;
     .setBG(url("../img/review@1x.jpg") no-repeat);
   }
-  
+
   .reviews__caption {
     margin-top: 60px;
     height: 80px;
     line-height: 80px;
     .setH0FontTab();
     order: 1;
-  }   
-  
+  }
+
   .reviews__contact-name {
     .setH2FontTab();
-  }    
-  
-  .reviews__send{
+  }
+
+  .reviews__send {
     margin-top: 75px;
     width: 175px;
     order: 2;
   }
-  
-  .reviews__buttons{
+
+  .reviews__buttons {
     margin-top: 25px;
     order: 5;
     width: 170px;
   }
-  
-  .reviews__contact{
+
+  .reviews__contact {
     margin-bottom: 25px;
     order: 4;
   }
-  
-  .reviews__margin{
+
+  .reviews__margin {
     margin-top: 30px;
   }
-  
+
   .reviews__text {
     width: 100%;
     order: 3;
@@ -127,24 +127,24 @@
   .reviews {
     padding: 0 @mainHMarginDesk 0 @mainHMarginDesk + @mainHSecondMarginDesk;
   }
-  
+
   .reviews__caption {
     margin-top: 65px;
     .setH0FontDesk();
   }
-  
-  .reviews__send{
+
+  .reviews__send {
     margin-top: 80px;
   }
-  
-  .reviews__buttons{
+
+  .reviews__buttons {
     margin-bottom: 95px;
   }
-  
+
   .reviews__contact-name {
     .setH2Font();
-  }  
-  
+  }
+
   .reviews__text {
     padding-top: 15px;
     padding-right: 105px;

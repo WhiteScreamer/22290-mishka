@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){   
+document.addEventListener('DOMContentLoaded', function(){
   var menu=document.getElementById("menu")
   var idMenuButton=document.getElementById("top-row__menu-button");
   idMenuButton.addEventListener("click", function() {
