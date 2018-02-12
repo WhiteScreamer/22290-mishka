@@ -1,5 +1,7 @@
-.about {
-  margin: 30px @mainHMargin 0 @mainHMargin;
+.about {  
+  width: @mobileWidth;
+  .centerBlock();
+  margin-top: 30px;
 }
 
 .about__caption {
@@ -34,9 +36,10 @@
   line-height: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .about {
-    margin: 70px @mainHMarginTab 0 @mainHMarginTab;
+    margin-top: 70px;
+	width: @tabletWidth;
   }
 
   .about__caption {
@@ -65,9 +68,10 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .about {
-    margin: 110px @mainHMarginDesk 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+    margin-top: 110px;
+	width: @desktopWidth - 2 * @mainHSecondMarginDesk;
   }
 
   .about__caption {

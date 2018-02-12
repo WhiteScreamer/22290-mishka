@@ -1,7 +1,9 @@
 .contacts {
   display: flex;
   flex-direction: column;
+  .centerBlock();
   margin-top: 60px;
+  width: @mobileWidth + 2 * @mainHMargin;  
 }
 
 .contacts__caption {
@@ -59,12 +61,13 @@
   .setButton();
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .contacts {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+	width: @tabletWidth + 2 * @mainHMarginTab;
   }
 
   .contacts__caption {
@@ -105,12 +108,13 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .contacts {
     flex-direction: column;
     justify-content: space-between;
     padding-top: 100px;
     height: 460px;
+	width: @desktopWidth + 2 * @mainHMarginDesk;
   }
 
   .contacts__caption {

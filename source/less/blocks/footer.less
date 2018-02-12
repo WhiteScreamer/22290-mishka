@@ -3,11 +3,13 @@
 }
 
 .footer {
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   .setBG(#f1f1f1);
+  width: @mobileWidth;
+  .centerBlock();
+  margin-top: 10px;
 }
 
 .footer__img-box {
@@ -15,11 +17,12 @@
   .footerBlockWidth();
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .footer {
     flex-direction: row;
     justify-content: space-between;
-    margin: 90px @mainHMarginTab 0 @mainHMarginTab;
+    margin-top: 90px;
+	width: @tabletWidth;
   }
 
   .footer__img-box {
@@ -27,8 +30,9 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .footer {
-    margin: 140px @mainHMarginDesk 0 @mainHMarginDesk;
+    margin-top: 140px;
+	width: @desktopWidth;
   }
 }

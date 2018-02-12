@@ -52,13 +52,13 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .menu {
     position: absolute;
     top: 0;
-    left: @mainHMarginTab;
+    left: 0;
     display: block;
-    width: 100%;
+    width: @tabletWidth;
   }
 
   .menu__list {
@@ -92,8 +92,7 @@
 
   .menu__link--basket {
     margin-top: 0;
-    padding-left: 75px;
-    padding-right: @mainHMarginTab*2;
+    padding-left: 75px;    
     height: @mainMenuHeightTab;
     line-height: @mainMenuHeightTab;
     width: auto;
@@ -101,9 +100,9 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .menu {
-    left: @mainHMarginDesk;
+	width: @desktopWidth;
   }
 
   .menu__link {
@@ -119,8 +118,7 @@
     width: 0;
   }
 
-  .menu__link--basket {
-    padding-right: @mainHMarginDesk*2;
+  .menu__link--basket {   
     width: auto;
   }
 

@@ -1,5 +1,6 @@
 .product-week {
-  padding: 0 @mainHMargin;
+  width: @mobileWidth;
+  .centerBlock();
 }
 
 .product-week__header {
@@ -73,9 +74,9 @@
 
 @categoryWidth: 80px;
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .product-week {
-    padding: 0 @mainHMarginTab;
+    width: @tabletWidth;
   }
 
   .product-week__header {
@@ -128,9 +129,10 @@
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .product-week {
-    padding: 75px @mainHMarginDesk 0 @mainHMarginDesk;
+    padding-top: 75px;
+	width: @desktopWidth;
   }
 
   .product-week__header {

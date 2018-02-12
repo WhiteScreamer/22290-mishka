@@ -1,4 +1,4 @@
-@test:0;
+@test:1;
 
 @font-face {
   font-family: "OpenSans Bold";
@@ -18,7 +18,14 @@
 @mainTextColor: #444444;
 @mainHMargin: 30px;
 @mainHMarginTab: 50px;
-@mainHMarginDesk: 100px;
+@mainHMarginDesk: 50px;
+
+@tabletScreen: 768px;
+@desktopScreen: 1150px;
+
+@mobileWidth: 260px;
+@tabletWidth: 668px;
+@desktopWidth: 1050px;
 
 @mainHSecondMarginDesk: 175px;
 
@@ -92,6 +99,10 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+.centerBlock(){
+  margin: 0 auto;
 }
 
 .setBG(@background) when(@test=1) {

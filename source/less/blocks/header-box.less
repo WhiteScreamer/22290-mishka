@@ -1,12 +1,20 @@
+.header-box{
+  position: relative;
+  width: @mobileWidth;
+  .centerBlock();
+}
 .header-box__note {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
+  .header-box {
+	width: @tabletWidth;
+  }
+  
   .header-box__note {
     display: block;
-    text-align: right;
-    padding-right: @mainHMarginTab;
+    text-align: right;    
     height: @mainMenuSecondHeightTab;
     line-height: @mainMenuSecondHeightTab;
     .setPFont();
@@ -14,8 +22,8 @@
   }
 }
 
-@media (min-width: 1250px) {
-  .header-box__note {
-    padding-right: @mainHMarginDesk;
+@media (min-width: @desktopScreen) {  
+  .header-box {
+	width: @desktopWidth;
   }
 }

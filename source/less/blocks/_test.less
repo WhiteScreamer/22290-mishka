@@ -1,46 +1,42 @@
-.setBodyBG(mi) when(@test=1) {
-  background-image: url("mishka-index-mobile.jpg");
+.setBodyBGForTest(@img){
+  background-image: url(@img);
   background-repeat: no-repeat;
+  background-position: center top;
+}
+.setBodyBG(mi) when(@test=1) {
+  .setBodyBGForTest("mishka-index-mobile.jpg");
 }
 
 .setBodyBG(ti) when(@test=1) {
-  background-image: url("mishka-index-tablet.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-index-tablet.jpg");  
 }
 
 .setBodyBG(di) when(@test=1) {
-  background-image: url("mishka-index-desktop.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-index-desktop.jpg");  
 }
 
 .setBodyBG(mc) when(@test=1) {
-  background-image: url("mishka-catalog-mobile.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-catalog-mobile.jpg");  
 }
 
 .setBodyBG(tc) when(@test=1) {
-  background-image: url("mishka-catalog-tablet.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-catalog-tablet.jpg");  
 }
 
 .setBodyBG(dc) when(@test=1) {
-  background-image: url("mishka-catalog-desktop.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-catalog-desktop.jpg");  
 }
 
 .setBodyBG(mf) when(@test=1) {
-  background-image: url("mishka-form-mobile.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-form-mobile.jpg");  
 }
 
 .setBodyBG(tf) when(@test=1) {
-  background-image: url("mishka-form-tablet.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-form-tablet.jpg");  
 }
 
 .setBodyBG(df) when(@test=1) {
-  background-image: url("mishka-form-desktop.jpg");
-  background-repeat: no-repeat;
+  .setBodyBGForTest("mishka-form-desktop.jpg");  
 }
 
 .setBodyBG() when(@test=0) {
@@ -51,13 +47,13 @@
   .setBodyBG(mi);
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tabletScreen) {
   .body-index {
     .setBodyBG(ti);
   }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: @desktopScreen) {
   .body-index {
     .setBodyBG(di);
   }
