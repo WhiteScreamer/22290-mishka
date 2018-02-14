@@ -1,10 +1,9 @@
 .caption {
-  height: 175px;
-  margin: 0 0 30px 0;
+  height: 170px;  
   .setBG(#f1f1f1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: @mobileWidth + 2 * @mainHMargin;
+  .centerBlock();
+  margin-bottom:35px;
 }
 
 .caption__text {
@@ -12,5 +11,35 @@
   padding: 0;
   .setH0Font();
   text-align: center;
-  line-height: 30px;
+  line-height: 170px;
+  width: @mobileWidth;
+  .centerBlock();
 }
+
+@media (min-width: @tabletScreen) {
+  .caption {
+	width: @tabletWidth + 2 * @mainHMarginTab;
+	height: 160px;
+	margin-bottom:80px;
+  }
+  
+  .caption__text {
+	width: @tabletWidth;
+	.setH0FontTab();
+	line-height: 120px;
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .caption {
+	width: @desktopWidth + 2 * @mainHMarginDesk;
+	height: 190px;
+	margin-bottom: 130px;
+  }
+  
+  .caption__text {
+	width: @desktopWidth;
+	.setH0FontDesk();
+  }
+}
+

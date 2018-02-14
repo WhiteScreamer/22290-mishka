@@ -1,89 +1,49 @@
 .product {
-  margin: 0 @mainHMargin 30px @mainHMargin;
+  margin: 0 0 28px 0;
   border: @borderBetweenBlock;
+  width: @mobileWidth;
 }
 
-.product__header {
-  margin: 20px 0;
-}
-
-.product__caption {
-  .setH2Font();
-  margin: 20px 0 10px 25px;
-}
-
-.product__category {
-  .setH2Font();
-  color: @secondColor;
-  margin: 0;
-}
-
-.product__description-box {
-  .setPFont();
-  color: @mainTextColor;
-}
-
-.product__desc {
-  .setSPFont();
-  color: @mainTextColor;
-  margin-left: 25px;
-  margin-right: 25px;
-  padding-bottom: 25px;
-  border-bottom: @borderBetweenBlock;
-}
-
-.product__description {
-  margin: 0;
-  padding: 5px 0;
-  line-height: 25px;
-}
-
-.product__properties {
-  width: 100%;
-  border-spacing: 0;
-  margin: 5px 0;
-  vertical-align: middle;
-}
-
-.product__property-label {
-  border-bottom: @borderBetweenBlock;
-  height: 40px;
-  width: 95px;
-}
-
-.product__property-value {
-  border-bottom: @borderBetweenBlock;
+.product__link{  
+  width: 260px;
+  height: 195px;
 }
 
 .product__pic {
   margin: 0;
 }
 
-.product__footer-week {
-  text-align: center;
+.product__info{
+  display: flex;
+  flex-direction: column;
+  width: @mobileWidth - 2 * 28px;
+  height: 175px;
+  .centerBlock();
+}
+
+.product__caption {
+  .setH2Font();  
+  margin: 25px 0 0 0;
+}
+
+.product__desc {
+  .setSPFont();
+  color: @mainTextColor;   
+  margin: 10px 0 0 0;   
 }
 
 .product__footer {
-  height: 65px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 0 25px 13px 25px;
+  align-items: center;
+  min-height: 70px;  
+  border-top: @borderBetweenBlock;  
+  margin-top: 25px;
+  margin-bottom: 5px;
 }
 
 .product__price {
-  .setH3Font();
-  color: @mainTextColor;
-}
-
-.product__price-week {
-  .setH2Font();
-  color: @mainTextColor;
-}
-
-.product__order {
-  .setButton();
-  margin: 28px 0;
+  .setH3Font();   
 }
 
 .product__add {
