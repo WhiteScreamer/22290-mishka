@@ -1,20 +1,21 @@
-.header-box{
+.header-box {
   position: relative;
   width: @mobileWidth;
   .centerBlock();
 }
+
 .header-box__note {
   display: none;
 }
 
 @media (min-width: @tabletScreen) {
   .header-box {
-	width: @tabletWidth;
+    width: @tabletWidth;
   }
-  
+
   .header-box__note {
     display: block;
-    text-align: right;    
+    text-align: right;
     height: @mainMenuSecondHeightTab;
     line-height: @mainMenuSecondHeightTab;
     .setPFont();
@@ -22,8 +23,8 @@
   }
 }
 
-@media (min-width: @desktopScreen) {  
+@media (min-width: @desktopScreen) {
   .header-box {
-	width: @desktopWidth;
+    width: @desktopWidth;
   }
 }
