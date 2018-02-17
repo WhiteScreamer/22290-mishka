@@ -1,4 +1,4 @@
-@test:"";
+@test:1;
 
 @font-face {
   font-family: "OpenSans Bold";
@@ -17,10 +17,33 @@
 @secondColor: #63d1bb;
 @mainTextColor: #444444;
 @mainHMargin: 30px;
+@mainHMarginTab: 50px;
+@mainHMarginDesk: 50px;
+
+@tabletScreen: 768px;
+@desktopScreen: 1150px;
+
+@mobileWidth: 260px;
+@tabletWidth: 668px;
+@desktopWidth: 1050px;
+
+@mainHSecondMarginDesk: 175px;
+
+@mainMenuHeight: 80px;
+@mainMenuHeightTab: 85px;
+@mainMenuSecondHeightTab: 65px;
 
 .setFontOSBfamily(@size) {
   font-family: "OpenSans Bold", sans-serif;
   font-size: ~"@{size}px";
+}
+
+.setH0FontDesk() {
+  .setFontOSBfamily(53);
+}
+
+.setH0FontTab() {
+  .setFontOSBfamily(43);
 }
 
 .setH0Font() {
@@ -31,8 +54,16 @@
   .setFontOSBfamily(25);
 }
 
+.setHAFontTab() {
+  .setFontOSBfamily(20);
+}
+
 .setHAFont() {
   .setFontOSBfamily(19);
+}
+
+.setH2FontTab() {
+  .setFontOSBfamily(18);
 }
 
 .setH2Font() {
@@ -70,32 +101,16 @@
   list-style-type: none;
 }
 
+.centerBlock() {
+  margin: 0 auto;
+}
+
 .setBG(@background) when(@test=1) {
   background: none;
 }
 
-.setBG(@background) when(@test="") {
+.setBG(@background) when(@test=0) {
   background: @background;
-}
-
-.setBodyBG() when(@test="mi") {
-  background-image: url("mishka-index-mobile.jpg");
-}
-
-.setBodyBG() when(@test="mc") {
-  background-image: url("mishka-catalog-mobile.jpg");
-}
-
-.setBodyBG() when(@test="mf") {
-  background-image: url("mishka-form-mobile.jpg");
-}
-
-.setBodyBG() when(@test=0) {
-  background: none;
-}
-
-body {
-  .setBodyBG();
 }
 
 .setButton(@color: @mainTextColor; @bgColor: #ffffff; @border: @mainTextColor solid 2px) {

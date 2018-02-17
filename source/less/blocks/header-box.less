@@ -1,3 +1,30 @@
 .header-box {
-  border-bottom: @borderBetweenBlock;
+  position: relative;
+  width: @mobileWidth;
+  .centerBlock();
+}
+
+.header-box__note {
+  display: none;
+}
+
+@media (min-width: @tabletScreen) {
+  .header-box {
+    width: @tabletWidth;
+  }
+
+  .header-box__note {
+    display: block;
+    text-align: right;
+    height: @mainMenuSecondHeightTab;
+    line-height: @mainMenuSecondHeightTab;
+    .setPFont();
+    color: @mainTextColor;
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .header-box {
+    width: @desktopWidth;
+  }
 }

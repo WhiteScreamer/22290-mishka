@@ -1,7 +1,20 @@
 .order-form {
-  margin: 0 @mainHMargin;
+  width: @mobileWidth;
+  .centerBlock();
 }
 
 .order-form__send {
   .setButton();
+}
+
+@media (min-width: @tabletScreen) {
+  .order-form {
+    width: @tabletWidth;
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .order-form {
+    width: @desktopWidth;
+  }
 }

@@ -1,12 +1,23 @@
-.menu-catalog__list {
+.menu-catalog {
   .ulReset();
+  display: flex;
+  flex-direction: column;
+  width: @mobileWidth + 2 * @mainHMargin;
+  .centerBlock();
+}
+
+.menu-catalog__item {
+  flex-grow: 1;
 }
 
 .menu-catalog__link {
-  display: block;
-  height: 55px;
+  display: flex;
+  align-items: center;
+  height: 105px;
+  line-height: 23px;
   text-decoration: none;
-  padding: 25px @mainHMargin;
+  margin: 0;
+  padding: 0 @mainHMargin;
   color: white;
   .setHAFont();
 
@@ -16,5 +27,29 @@
 
   &--right {
     .setBG(#56c3b2 url(../img/icon-toy.svg) no-repeat right 20px top 50%);
+  }
+}
+
+@media (min-width: @tabletScreen) {
+  .menu-catalog {
+    flex-direction: row;
+    width: @tabletWidth;
+  }
+
+  .menu-catalog__item {
+    width: 50%;
+  }
+
+  .menu-catalog__link {
+    padding: 0 0 0 35px;
+    line-height: 30px;
+    height: 115px;
+    .setHAFontTab();
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .menu-catalog {
+    width: @desktopWidth;
   }
 }

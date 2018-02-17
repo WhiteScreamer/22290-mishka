@@ -1,0 +1,84 @@
+.setBodyBGForTest(@img) {
+  background-image: url(@img);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+.setBodyBG(mi) when(@test=1) {
+  .setBodyBGForTest("mishka-index-mobile.jpg");
+}
+
+.setBodyBG(ti) when(@test=1) {
+  .setBodyBGForTest("mishka-index-tablet.jpg");
+}
+
+.setBodyBG(di) when(@test=1) {
+  .setBodyBGForTest("mishka-index-desktop.jpg");
+}
+
+.setBodyBG(mc) when(@test=1) {
+  .setBodyBGForTest("mishka-catalog-mobile.jpg");
+}
+
+.setBodyBG(tc) when(@test=1) {
+  .setBodyBGForTest("mishka-catalog-tablet.jpg");
+}
+
+.setBodyBG(dc) when(@test=1) {
+  .setBodyBGForTest("mishka-catalog-desktop.jpg");
+}
+
+.setBodyBG(mf) when(@test=1) {
+  .setBodyBGForTest("mishka-form-mobile.jpg");
+}
+
+.setBodyBG(tf) when(@test=1) {
+  .setBodyBGForTest("mishka-form-tablet.jpg");
+}
+
+.setBodyBG(df) when(@test=1) {
+  .setBodyBGForTest("mishka-form-desktop.jpg");
+}
+
+.setBodyBG() when(@test=0) {
+  background: none;
+}
+
+.body-index {
+  .setBodyBG(mi);
+}
+
+.body-catalog {
+  .setBodyBG(mc);
+}
+
+.body-form {
+  .setBodyBG(mf);
+}
+
+@media (min-width: @tabletScreen) {
+  .body-index {
+    .setBodyBG(ti);
+  }
+
+  .body-catalog {
+    .setBodyBG(tc);
+  }
+
+  .body-form {
+    .setBodyBG(tf);
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .body-index {
+    .setBodyBG(di);
+  }
+
+  .body-catalog {
+    .setBodyBG(dc);
+  }
+
+  .body-form {
+    .setBodyBG(df);
+  }
+}

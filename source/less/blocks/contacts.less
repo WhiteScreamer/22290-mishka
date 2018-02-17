@@ -1,25 +1,43 @@
 .contacts {
-  margin: 90px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  .centerBlock();
+  margin-top: 60px;
+  width: @mobileWidth + 2 * @mainHMargin;
 }
 
 .contacts__caption {
   margin: 0 @mainHMargin;
+  height: 80px;
+  line-height: 80px;
+  vertical-align: middle;
   .setFontOSBfamily(17);
 }
 
-.contacts__info {
-  margin: 30px @mainHMargin;
+.contacts__email,
+.contacts__address {
+  margin: 0 @mainHMargin;
   width: 100%;
   .setPFont();
   color: @mainTextColor;
 }
 
-.contacts__field {
+.contacts__address {
+  margin-top: 40px;
+  width: 250px;
+}
+
+.contacts__field,
+.contacts__value {
   padding: 0;
   vertical-align: top;
 }
 
-.contacts__field a {
+.contacts__field {
+  width: 75px;
+}
+
+.contacts__value a {
   color: @mainTextColor;
   text-decoration: none;
 }
@@ -27,10 +45,11 @@
 .contacts__address-row {
   margin: 0;
   padding: 0;
+  padding-bottom: 15px;
 }
 
 .contacts__map {
-  margin-top: 100px;
+  margin-top: 25px;
   width: 100%;
 }
 
@@ -40,4 +59,93 @@
 
 .contacts__send {
   .setButton();
+}
+
+@media (min-width: @tabletScreen) {
+  .contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: @tabletWidth + 2 * @mainHMarginTab;
+  }
+
+  .contacts__caption {
+    margin: 15px @mainHMarginTab 0 @mainHMarginTab;
+    height: 165px;
+    width: 100%;
+    line-height: 180px;
+    vertical-align: middle;
+    .setH0FontTab();
+  }
+
+  .contacts__email {
+    margin: 0 0 0 @mainHMarginTab;
+    width: 334px;
+    .setMailFont();
+  }
+
+  .contacts__address {
+    margin: 0 @mainHMarginTab 0 0;
+    width: 334px;
+    .setMailFont();
+  }
+
+  .contacts__send-box {
+    margin: 55px auto 0 auto;
+  }
+
+  .contacts__address-row {
+    padding-bottom: 5px;
+  }
+
+  .contacts__send {
+    width: 230px;
+  }
+
+  .contacts__map {
+    margin-top: 60px;
+  }
+}
+
+@media (min-width: @desktopScreen) {
+  .contacts {
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 100px;
+    height: 460px;
+    width: @desktopWidth + 2 * @mainHMarginDesk;
+  }
+
+  .contacts__caption {
+    margin: 10px 0 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+    width: 350px;
+    .setH0FontDesk();
+  }
+
+  .contacts__email {
+    margin: 5px 0 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+    width: 350px;
+  }
+
+  .contacts__address {
+    margin: 30px 0 auto @mainHMarginDesk + @mainHSecondMarginDesk;
+    width: 350px;
+  }
+
+  .contacts__address-row {
+    padding-bottom: 10px;
+  }
+
+  .contacts__map {
+    margin: 0 @mainHMarginDesk 0 0;
+    height: 460px;
+    width: 50%;
+    order: 1;
+  }
+
+  .contacts__send-box {
+    margin: 0 0 0 @mainHMarginDesk + @mainHSecondMarginDesk;
+    width: 350px;
+  }
 }
